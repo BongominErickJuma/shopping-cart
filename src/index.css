@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #16e0bd;
+
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h2: 3.75rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+  color: var(--clr-accent);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+
+body {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--fs-body);
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+button {
+  display: inline-block;
+  padding: 0.5em 2.5em;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+}
+
+a {
+  color: inherit;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h2);
+  text-decoration: none;
+}
+
+.productItem {
+  width: 21.875rem;
+  margin: 1em auto;
+  padding: 1em 0;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.productItem:hover {
+  box-shadow: var(--bs);
+}
+.productItem img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.cartItem {
+  margin-top: 17vh;
+}
+
+.zoom {
+  position: fixed;
+  top: 20%;
+  right: 5em;
+  width: 60px;
+  opacity: 0;
+  animation: zoom 500ms ease-in forwards;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    width: 40px;
+  }
+  100% {
+    opacity: 0;
+    right: 5em;
+    top: 0;
+  }
+}
+.container {
+  margin-top: 17vh;
+}
+.container h2 {
+  margin-bottom: 1em;
+}
+
+@media (max-width: 31.25rem) {
+  .productItem {
+    box-shadow: var(--bs);
+    max-width: 18.75rem;
+  }
+}
+
+@media (min-width: 31.25rem) {
+  .shopItem {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+  }
+  .zoom {
+    width: 100px;
+  }
+}
