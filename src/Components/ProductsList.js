@@ -2,22 +2,22 @@ const productList = [
   {
     id: 1,
     name: "Shirts",
-    image: "Wears/shirt1.jfif",
+    image: `${process.env.PUBLIC_URL}/Wears/shirt1.jfif`,
   },
   {
     id: 2,
     name: "Shorts",
-    image: "Wears/short1.jfif",
+    image: `${process.env.PUBLIC_URL}/Wears/short1.jfif`,
   },
   {
     id: 3,
     name: "Trousers",
-    image: "Wears/trouser2.jfif",
+    image: `${process.env.PUBLIC_URL}/Wears/trouser2.jfif`,
   },
   {
     id: 4,
     name: "Shoes",
-    image: "Wears/shoe-pair.jfif",
+    image: `${process.env.PUBLIC_URL}/Wears/shoe-pair.jfif`,
   },
 ];
 
