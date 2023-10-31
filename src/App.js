@@ -78,7 +78,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/shopping-cart">
       <div className="App">
         <Navbar cart={cart} />
         <Routes>

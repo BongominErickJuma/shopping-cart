@@ -2,7 +2,7 @@ const productList = [
   {
     id: 1,
     name: "Shirts",
-    image: `${process.env.PUBLIC_URL}/Wears/Ts1.png`,
+    image: `${process.env.PUBLIC_URL}/Wears/shirt1.jfif`,
   },
   {
     id: 2,
