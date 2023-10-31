@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import ShoppingCart from "./Components/ShoppingCart";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ShopProducts from "./Components/ShopProducts";
 import productList from "./Components/ProductsList";
 import ShirtProducts from "./ProductItems/ShirtProducts";
