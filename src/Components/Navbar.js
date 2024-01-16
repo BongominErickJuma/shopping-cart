@@ -14,15 +14,13 @@ const Navbar = ({ cart }) => {
   return (
     <header>
       <div className="logo">
-        <h2>
-          <Link to="/">Categories</Link>
-        </h2>
-      </div>
-      <p>
         <Link to="/cart" className="cart">
-          Cart( {cart.length} )
+          <i class="fas fa-shopping-cart"></i>
+          <sup>
+            <sup>{cart.length}</sup>
+          </sup>
         </Link>
-      </p>
+      </div>
       <button className="nav-toggle" onClick={handleToggle}>
         <span className="hamburger"></span>
       </button>
@@ -55,11 +53,6 @@ const Navbar = ({ cart }) => {
               onClick={handleRemove}
             >
               Trousers
-            </NavLink>
-          </li>
-          <li className="nav__item">
-            <NavLink to="/cart" className="nav__link" onClick={handleRemove}>
-              Cart
             </NavLink>
           </li>
         </ul>
